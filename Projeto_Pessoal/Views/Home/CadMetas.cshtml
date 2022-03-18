@@ -1,0 +1,44 @@
+﻿@model Projeto_Pessoal.Models.ClMetas
+
+@{
+    ViewBag.Title = "Cadastro das Metas";
+}
+
+<h2>Cadastro das Metas</h2>
+
+@using (Html.BeginForm("CadMetas", "Home", FormMethod.Post, new { enctype = "multipart/form-ddata" }))
+{
+    @Html.LabelFor(m => m.Codigo)
+    <br />
+    @Html.EditorFor(m => m.Codigo)
+    <br />
+    <br />
+
+    @Html.LabelFor(m => m.Titulo)
+    <br />
+    @Html.EditorFor(m => m.Titulo)
+    <br />
+    <br />
+
+    @Html.LabelFor(m => m.Data_Inicial)
+    <br />
+    @Html.EditorFor(m => m.Data_Inicial)
+    <br />
+    <br />
+
+    @Html.LabelFor(m => m.Data_Final)
+    <br />
+    @Html.EditorFor(m => m.Data_Final)
+    <br />
+    <br />
+
+    @Html.LabelFor(m => m.Descricao)
+    <br />
+    @Html.EditorFor(m => m.Descricao)
+    <br />
+    <br />
+
+    <br />
+    <input type="submit" value="Cadastrar" />
+}
+
